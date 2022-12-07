@@ -1,6 +1,6 @@
 {
   "name": "md-to-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "将markdown转化为html",
   "main": "./dist/index.js",
   "types": "index.d.ts",
