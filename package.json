@@ -1,10 +1,12 @@
 {
-  "name": "@gd/md-to-html",
-  "version": "1.0.1",
+  "name": "md-to-web",
+  "version": "1.0.0",
   "description": "将markdown转化为html",
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.js",
+  "types": "index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "dev": "tsc && tsc ./index.ts && node ./index.js",
@@ -15,7 +17,7 @@
     "url": "git+https://github.com/goodlovings/md-to-html.git"
   },
   "keywords": [
-    "markdown"
+    "markdown", "html", "md-to-html"
   ],
   "author": "goodlovings",
   "license": "ISC",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@types/marked": "^4.0.7",
+    "@types/node": "^18.11.11",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }
