@@ -6,8 +6,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'index.ts'),
-      name: 'index',
-      fileName: 'index',
+      name: 'mtw',
+      fileName: 'mtw',
       formats: ['es', 'cjs', 'umd']
     }
   }
