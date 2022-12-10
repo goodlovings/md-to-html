@@ -1,5 +1,33 @@
 import { marked } from 'marked';
 
+export enum Themes {
+  ChanningCyan = 'channing-cyan',
+  CondensedNightPurple = 'condensed-night-purple',
+  Cyanosis = 'cyanosis',
+  Fancy = 'fancy',
+  Github = 'github',
+  Hydrogen = 'hydrogen',
+  Juejin = 'juejin',
+  Smartblue = 'smartblue',
+  Greenwillow = 'greenwillow',
+  Vgreen = 'v-green',
+  VuePro = 'vue-pro',
+  HealerReadable = 'healer-readable',
+  MkCute = 'mk-cute',
+  Jzman = 'jzman',
+  GeekBlack = 'geek-black',
+  AwesomeGreen = 'awesome-green',
+  QklhkChocolate = 'qklhk-chocolate',
+  Orange = 'orange',
+  ScrollsLight = 'scrolls-light',
+  SimplicityGreen = 'simplicity-green',
+  Arknights = 'arknights',
+  Vuepress = 'vuepress',
+  ChineseRed = 'Chinese-red',
+  Nico = 'nico',
+  DevuiBlue = 'devui-blue'
+}
+
 interface CatalogType {
   id: string,
   text: string,
@@ -23,7 +51,7 @@ class MdToHtml {
    * @param {markdown字符串} mdstr
    * @param {md主题样式} theme
    */
-  mdRender(id: string, mdstr: string, theme: string = 'github') {
+  mdRender(id: string, mdstr: string, theme: Themes = Themes.Github) {
     const dom: HTMLElement | null = document.getElementById(id);
     if (dom) {
       let newClass: string[] = dom.className.split(' ');

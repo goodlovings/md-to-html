@@ -66,11 +66,11 @@ yarn add md-to-web@latest
 
 接收 **dom** 到 id，将 **markdown** 字符串转化为 **html** 格式文本，并渲染到指定 id 的 dom 上；
 
-| 参数  | 必须 | 类型   | 描述                           |
-| ----- | ---- | ------ | ------------------------------ |
-| id    | ✅   | string | 将转化的内容渲染到 id 的元素上 |
-| mdstr | ✅   | string | 传入的 markdown 字符串         |
-| theme |      | string | 渲染内容到主题样式             |
+| 参数  | 必须 | 类型   | 描述                            |
+| ----- | ---- | ------ | ------------------------------- |
+| id    | ✅   | string | 将转化的内容渲染到 id 的元素上  |
+| mdstr | ✅   | string | 传入的 markdown 字符串          |
+| theme |      | string | 渲染内容到主题样式，默认 github |
 
 > **theme 提供的样式：**
 > channing-cyan,
@@ -99,6 +99,17 @@ yarn add md-to-web@latest
 > nico,
 > devui-blue
 
+本库提供主题的枚举类型：Themes，可以通过引入 Themes 来选择主题样式，如下；也可以直接输入上述提供的字符：
+
+```javascript
+import { mdRender, Themes } from "md-to-web";
+
+// 页面id为markdown_id元素渲染子节点<h1>一级标题</h1>， "Themes.Github"为markdown内容的主题样式
+mdRender("markdown_id", "# 一级标题", Themes.Github);
+// 或者
+mdRender("markdown_id", "# 一级标题", "github");
+```
+
 ### 3、setCatalog
 
 根据 **markdown_id** 渲染节点内容生成目录数据，并渲染在 **catalog_id** 的 dom 上，第三个参数 true 表示点击目录定位到 md 内容位置
@@ -114,13 +125,13 @@ yarn add md-to-web@latest
 ## 实例
 
 ```javascript
-import { mdToHtml, mdRender } from "md-to-web";
+import { mdToHtml, mdRender, Themes } from "md-to-web";
 
 // 输出：<h1>一级标题</h1>
 let html = mdToHtml("# 一级标题");
 
 // 页面id为markdown_id元素渲染子节点<h1>一级标题</h1>， "fancy"为markdown内容的主题样式
-mdRender("markdown_id", "# 一级标题", "fancy");
+mdRender("markdown_id", "# 一级标题", Themes.Github);
 
 // 根据markdown渲染节点内容生成目录数据，并渲染在catalog_id的dom上，第三个参数 true 表示点击目录项定位到md内容位置
 setCatalog("markdown_id", "catalog_id", true);
