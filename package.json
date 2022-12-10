@@ -1,6 +1,6 @@
 {
   "name": "md-to-web",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "将markdown转化为html",
   "main": "./dist/mtw.js",
   "types": "./types/index.d.ts",
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/goodlovings/md-to-html.git"
   },
   "keywords": [
-    "markdown", "html", "md-to-html", "markdown theme", "markdown render"
+    "markdown", "html", "md-to-html", "markdown theme", "markdown render", "markdown文档转化为html格式", "提供多种文档主题", "根生成文章目录"
   ],
   "author": "goodlovings",
   "license": "ISC",
