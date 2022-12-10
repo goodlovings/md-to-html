@@ -57,7 +57,7 @@ class MdToHtml {
       let nodes = domSource.childNodes;
       if (nodes?.length > 0) {
         nodes.forEach((node: any) => {
-          if (['h1', 'h2', 'h3', 'h4'].includes(node.localName)) {
+          if (['h1', 'h2', 'h3'].includes(node.localName)) {
             catalogData.push({
               id: node.id,
               text: node.innerHTML,

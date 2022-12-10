@@ -102,11 +102,14 @@ yarn add md-to-web@latest
 ### 3、setCatalog
 
 根据 **markdown_id** 渲染节点内容生成目录数据，并渲染在 **catalog_id** 的 dom 上，第三个参数 true 表示点击目录定位到 md 内容位置
-| 参数 | 必须 | 类型 | 描述 |
-| ----- | ---- | ---- | ------------------------------ |
-| sourceId | ✅ | string | 需要进行生成目录的 markdownid 的元素 |
-| targetId | ✅ | string | 生成目录渲染的 catalogid|
-| isClickAnchor | |boolean | md 内容是否可以点击目录进行定位，默认 true |
+
+| 参数          | 必须 | 类型    | 描述                                       |
+| ------------- | ---- | ------- | ------------------------------------------ |
+| sourceId      | ✅   | string  | 需要进行生成目录的 markdownid 的元素       |
+| targetId      | ✅   | string  | 生成目录渲染的 catalogid                   |
+| isClickAnchor |      | boolean | md 内容是否可以点击目录进行定位，默认 true |
+
+**注意**：生成的目录层级默认为： h1,h2,h3，对应 markdown 标题等级：'#','##','###'
 
 ## 实例
 
